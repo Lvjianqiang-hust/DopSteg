@@ -1,0 +1,27 @@
+('cmd_loop', 'pr_display_file', 'pr_fsio_open_canon', 'auth_post_pass', 'pr_display_file', 'sreplace') 1.0
+('cmd_loop', 'pr_display_file', 'sreplace') 1.0
+('cmd_loop', 'pr_display_file', 'pr_fsio_open_canon', 'auth_post_pass', 'sreplace') 1.0
+('cmd_loop', 'pr_display_file', 'pr_fsio_gets', 'pr_fsio_read', 'auth_post_pass', 'sreplace') 1.0
+('cmd_loop', 'pr_timer_add', 'xaset_insert_sort', 'auth_post_pass', 'pr_display_file', 'sreplace') 0.8333333333333334
+('cmd_loop', 'pr_display_file', 'pr_var_get', 'auth_post_pass', 'pr_display_file', 'sreplace') 0.8333333333333334
+('cmd_loop', 'pr_display_file', 'pr_fsio_gets', 'pr_fsio_read', 'auth_pass', 'sreplace') 0.8333333333333334
+('cmd_loop', 'pr_display_file', 'pr_fsio_open_canon', 'core_quit', 'pr_display_file', 'sreplace') 0.8333333333333334
+('cmd_loop', 'pr_display_file', 'pr_fsio_open_canon', 'auth_pass', 'sreplace') 0.8
+('cmd_loop', 'pr_display_file', 'pr_var_get', 'auth_post_pass', 'sreplace') 0.8
+('cmd_loop', 'pr_timer_add', 'xaset_insert_sort', 'auth_post_pass', 'sreplace') 0.8
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_read', 'auth_post_pass', 'pr_display_file', 'sreplace') 0.6666666666666666
+('cmd_loop', 'pr_display_file', 'pr_var_get', 'core_quit', 'pr_display_file', 'sreplace') 0.6666666666666666
+('cmd_loop', 'pr_timer_add', 'xaset_insert_sort', 'core_quit', 'pr_display_file', 'sreplace') 0.6666666666666666
+('cmd_loop', 'pr_timer_add', 'xaset_insert_sort', 'auth_pass', 'sreplace') 0.6
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_read', 'auth_post_pass', 'sreplace') 0.6
+('cmd_loop', 'pr_display_file', 'pr_var_get', 'auth_pass', 'sreplace') 0.6
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_printf', 'pr_netio_write', 'auth_post_pass', 'sreplace') 0.5
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_read', 'run_schedule', 'auth_post_pass', 'sreplace') 0.5
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_read', 'core_quit', 'pr_display_file', 'sreplace') 0.5
+('cmd_loop', 'pr_timer_add', 'handle_alarm', 'process_timers', 'auth_post_pass', 'sreplace') 0.5
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_read', 'pr_netio_poll', 'auth_post_pass', 'sreplace') 0.5
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_read', 'auth_pass', 'sreplace') 0.4
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_read', 'pr_netio_poll', 'auth_pass', 'sreplace') 0.3333333333333333
+('cmd_loop', 'pr_timer_add', 'handle_alarm', 'process_timers', 'auth_pass', 'sreplace') 0.3333333333333333
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_printf', 'pr_netio_write', 'auth_pass', 'sreplace') 0.3333333333333333
+('cmd_loop', 'pr_netio_telnet_gets', 'pr_netio_read', 'run_schedule', 'auth_pass', 'sreplace') 0.3333333333333333

@@ -1,0 +1,3 @@
+/home/c402/FinalVersion/Search/src/build/CMakeFiles/GadgetSearcher.dir
+/home/c402/FinalVersion/Search/src/build/CMakeFiles/edit_cache.dir
+/home/c402/FinalVersion/Search/src/build/CMakeFiles/rebuild_cache.dir

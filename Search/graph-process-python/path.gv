@@ -1,0 +1,229 @@
+// The Round Table
+digraph {
+	cmd_loop [label=cmd_loop]
+	cmd_loop -> pr_display_file
+	cmd_loop -> pr_timer_add
+	cmd_loop -> pr_netio_telnet_gets
+	pr_display_file [label=pr_display_file]
+	pr_display_file -> sreplace
+	pr_display_file -> pr_fsio_open_canon
+	pr_display_file -> pr_var_get
+	pr_display_file -> pr_fsio_gets
+	pr_timer_add [label=pr_timer_add]
+	pr_timer_add -> xaset_insert_sort
+	pr_timer_add -> handle_alarm
+	pr_netio_telnet_gets [label=pr_netio_telnet_gets]
+	pr_netio_telnet_gets -> pr_netio_read
+	pr_netio_telnet_gets -> pr_netio_printf
+	pr_fsio_close [label=pr_fsio_close]
+	pr_fsio_open_canon [label=pr_fsio_open_canon]
+	pr_fsio_open_canon -> auth_pass
+	pr_fsio_open_canon -> auth_post_pass
+	pr_fsio_open_canon -> core_quit
+	pr_fsio_open_canon -> core_pwd
+	pr_fsio_open_canon -> core_mkd
+	pr_fsio_open_canon -> core_help
+	pr_fsio_open_canon -> ls_nlst
+	pr_fsio_open_canon -> core_pasv
+	pr_fsio_open_canon -> core_epsv
+	pr_fsio_open_canon -> xfer_retr
+	pr_fsio_open_canon -> xfer_stor
+	pr_fsio_open_canon -> xfer_pre_stou
+	pr_fsio_open_canon -> core_dele
+	pr_fsio_open_canon -> core_rnto
+	pr_fsio_open_canon -> core_rmd
+	pr_fsio_open_canon -> xfer_post_stou
+	pr_fsio_open_canon -> core_cwd
+	pr_fsio_open_canon -> core_cdup
+	pr_var_get [label=pr_var_get]
+	pr_var_get -> auth_pass
+	pr_var_get -> auth_post_pass
+	pr_var_get -> core_quit
+	pr_var_get -> core_pwd
+	pr_var_get -> core_mkd
+	pr_var_get -> core_help
+	pr_var_get -> pr_table_get
+	pr_var_get -> ls_nlst
+	pr_var_get -> core_pasv
+	pr_var_get -> core_epsv
+	pr_var_get -> xfer_retr
+	pr_var_get -> xfer_stor
+	pr_var_get -> xfer_pre_stou
+	pr_var_get -> core_dele
+	pr_var_get -> core_rnto
+	pr_var_get -> core_rmd
+	pr_var_get -> xfer_post_stou
+	pr_var_get -> core_cwd
+	pr_var_get -> core_cdup
+	pr_fsio_gets [label=pr_fsio_gets]
+	pr_fsio_gets -> pr_fsio_read
+	xaset_insert_sort [label=xaset_insert_sort]
+	xaset_insert_sort -> auth_pass
+	xaset_insert_sort -> auth_post_pass
+	xaset_insert_sort -> core_quit
+	xaset_insert_sort -> core_pwd
+	xaset_insert_sort -> core_mkd
+	xaset_insert_sort -> core_help
+	xaset_insert_sort -> ls_nlst
+	xaset_insert_sort -> core_pasv
+	xaset_insert_sort -> core_epsv
+	xaset_insert_sort -> xfer_retr
+	xaset_insert_sort -> xfer_stor
+	xaset_insert_sort -> xfer_pre_stou
+	xaset_insert_sort -> core_dele
+	xaset_insert_sort -> core_rnto
+	xaset_insert_sort -> core_rmd
+	xaset_insert_sort -> xfer_post_stou
+	xaset_insert_sort -> core_cwd
+	xaset_insert_sort -> core_cdup
+	handle_alarm [label=handle_alarm]
+	handle_alarm -> process_timers
+	pr_netio_read [label=pr_netio_read]
+	pr_netio_read -> auth_pass
+	pr_netio_read -> auth_post_pass
+	pr_netio_read -> run_schedule
+	pr_netio_read -> pr_netio_poll
+	pr_netio_read -> core_quit
+	pr_netio_read -> core_pwd
+	pr_netio_read -> core_mkd
+	pr_netio_read -> core_help
+	pr_netio_read -> ls_nlst
+	pr_netio_read -> core_pasv
+	pr_netio_read -> core_epsv
+	pr_netio_read -> xfer_retr
+	pr_netio_read -> xfer_stor
+	pr_netio_read -> xfer_pre_stou
+	pr_netio_read -> core_dele
+	pr_netio_read -> core_rnto
+	pr_netio_read -> core_rmd
+	pr_netio_read -> xfer_post_stou
+	pr_netio_read -> core_cwd
+	pr_netio_read -> core_cdup
+	pr_netio_printf [label=pr_netio_printf]
+	pr_netio_printf -> pr_netio_write
+	auth_pass [label=auth_pass]
+	auth_pass -> sreplace
+	auth_post_pass [label=auth_post_pass]
+	auth_post_pass -> sreplace
+	auth_post_pass -> pr_display_file
+	auth_post_pass -> pr_timer_add
+	core_quit [label=core_quit]
+	core_quit -> pr_display_file
+	core_pwd [label=core_pwd]
+	core_mkd [label=core_mkd]
+	core_help [label=core_help]
+	ls_nlst [label=ls_nlst]
+	core_pasv [label=core_pasv]
+	core_epsv [label=core_epsv]
+	xfer_retr [label=xfer_retr]
+	xfer_retr -> pr_table_get
+	xfer_stor [label=xfer_stor]
+	xfer_stor -> pr_table_get
+	xfer_pre_stou [label=xfer_pre_stou]
+	core_dele [label=core_dele]
+	core_rnto [label=core_rnto]
+	core_rmd [label=core_rmd]
+	xfer_post_stou [label=xfer_post_stou]
+	core_cwd [label=core_cwd]
+	core_cdup [label=core_cdup]
+	pr_table_get [label=pr_table_get]
+	pr_fsio_read [label=pr_fsio_read]
+	pr_fsio_read -> auth_pass
+	pr_fsio_read -> auth_post_pass
+	pr_fsio_read -> core_quit
+	pr_fsio_read -> core_pwd
+	pr_fsio_read -> core_mkd
+	pr_fsio_read -> core_help
+	pr_fsio_read -> ls_nlst
+	pr_fsio_read -> core_pasv
+	pr_fsio_read -> core_epsv
+	pr_fsio_read -> xfer_retr
+	pr_fsio_read -> xfer_stor
+	pr_fsio_read -> xfer_pre_stou
+	pr_fsio_read -> core_dele
+	pr_fsio_read -> core_rnto
+	pr_fsio_read -> core_rmd
+	pr_fsio_read -> xfer_post_stou
+	pr_fsio_read -> core_cwd
+	pr_fsio_read -> core_cdup
+	process_timers [label=process_timers]
+	process_timers -> auth_pass
+	process_timers -> auth_post_pass
+	process_timers -> xaset_insert_sort
+	process_timers -> core_quit
+	process_timers -> core_pwd
+	process_timers -> core_mkd
+	process_timers -> core_help
+	process_timers -> ls_nlst
+	process_timers -> core_pasv
+	process_timers -> core_epsv
+	process_timers -> xfer_retr
+	process_timers -> xfer_stor
+	process_timers -> xfer_pre_stou
+	process_timers -> core_dele
+	process_timers -> core_rnto
+	process_timers -> core_rmd
+	process_timers -> xfer_post_stou
+	process_timers -> core_cwd
+	process_timers -> core_cdup
+	run_schedule [label=run_schedule]
+	run_schedule -> auth_pass
+	run_schedule -> auth_post_pass
+	run_schedule -> core_quit
+	run_schedule -> core_pwd
+	run_schedule -> core_mkd
+	run_schedule -> core_help
+	run_schedule -> ls_nlst
+	run_schedule -> core_pasv
+	run_schedule -> core_epsv
+	run_schedule -> xfer_retr
+	run_schedule -> xfer_stor
+	run_schedule -> xfer_pre_stou
+	run_schedule -> core_dele
+	run_schedule -> core_rnto
+	run_schedule -> core_rmd
+	run_schedule -> xfer_post_stou
+	run_schedule -> core_cwd
+	run_schedule -> core_cdup
+	pr_netio_poll [label=pr_netio_poll]
+	pr_netio_poll -> auth_pass
+	pr_netio_poll -> auth_post_pass
+	pr_netio_poll -> run_schedule
+	pr_netio_poll -> core_quit
+	pr_netio_poll -> core_pwd
+	pr_netio_poll -> core_mkd
+	pr_netio_poll -> core_help
+	pr_netio_poll -> ls_nlst
+	pr_netio_poll -> core_pasv
+	pr_netio_poll -> core_epsv
+	pr_netio_poll -> xfer_retr
+	pr_netio_poll -> xfer_stor
+	pr_netio_poll -> xfer_pre_stou
+	pr_netio_poll -> core_dele
+	pr_netio_poll -> core_rnto
+	pr_netio_poll -> core_rmd
+	pr_netio_poll -> xfer_post_stou
+	pr_netio_poll -> core_cwd
+	pr_netio_poll -> core_cdup
+	pr_netio_write [label=pr_netio_write]
+	pr_netio_write -> auth_pass
+	pr_netio_write -> auth_post_pass
+	pr_netio_write -> run_schedule
+	pr_netio_write -> pr_netio_poll
+	pr_netio_write -> core_quit
+	pr_netio_write -> core_pwd
+	pr_netio_write -> core_mkd
+	pr_netio_write -> core_help
+	pr_netio_write -> ls_nlst
+	pr_netio_write -> core_pasv
+	pr_netio_write -> core_epsv
+	pr_netio_write -> xfer_retr
+	pr_netio_write -> xfer_stor
+	pr_netio_write -> xfer_pre_stou
+	pr_netio_write -> core_dele
+	pr_netio_write -> core_rnto
+	pr_netio_write -> core_rmd
+	pr_netio_write -> xfer_post_stou
+	pr_netio_write -> core_cwd
+	pr_netio_write -> core_cdup
+}
